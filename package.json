@@ -1,0 +1,17 @@
+{
+  "name": "learncode-reactjs-tutorial",
+  "version": "1.0.0",
+  "description": "Tutorial: https://www.youtube.com/watch?v=AfWYO8t7ed4&list=PLoYCgNOIyGACDQLaThEEKBAlgs4OIUGif&index=1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "webpack": "^3.8.1"
+  }
+}
