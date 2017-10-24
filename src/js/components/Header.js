@@ -13,8 +13,11 @@ export default class Header extends React.Component {
 	render() {
 		return (
 			<div>
-				<Title title={this.props.title} />
-				<input onChange={this.handleChange.bind(this)} />
+				<Title title={this.props.title} value={this.props.title} />
+				<input
+					placeholder={this.props.title}
+					onChange={this.handleChange.bind(this)}
+				/>
 			</div>
 		);
 	}
