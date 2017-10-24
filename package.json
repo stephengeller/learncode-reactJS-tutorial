@@ -4,7 +4,7 @@
   "description": "Tutorial: https://www.youtube.com/watch?v=AfWYO8t7ed4&list=PLoYCgNOIyGACDQLaThEEKBAlgs4OIUGif&index=1",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
+    "dev": "webpack-dev-server --content-base src --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -24,7 +24,7 @@
     "jest": "^21.2.1",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "react-router": "^4.2.0",
+    "react-router": "^1.0.3",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.16.5"
   }

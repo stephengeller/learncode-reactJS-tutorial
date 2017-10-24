@@ -1,28 +1,20 @@
 import React from "React";
-import Header from "../components/Header.js";
-import Footer from "../components/Footer.js";
+import { Link } from "react-router";
 
 export default class Layout extends React.Component {
-	constructor() {
-		// always call super() on first line!
-		super();
-		this.state = {
-			title: "Welcome"
-		};
-	}
-
-	changeTitle(title) {
-		this.setState({ title });
+	navigate() {
+		this.props.history.pushState(null, "/");
+		// Could also use replaceState, which doesn't give you the option to use the 'back' button
 	}
 
 	render() {
 		return (
 			<div>
-				<Header
-					changeTitle={this.changeTitle.bind(this)}
-					title={this.state.title}
-				/>
-				<Footer />
+				<h1>Layout</h1>
+				{this.props.children}
+				<Link to="archives">Archives</Link>
+				<Link to="settings">Settings</Link>
+				<button onClick={this.navigate.bind(this)}>Featured</button>
 			</div>
 		);
 	}
