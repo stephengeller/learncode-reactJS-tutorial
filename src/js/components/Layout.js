@@ -7,17 +7,22 @@ export default class Layout extends React.Component {
 	constructor() {
 		// always call super() on first line!
 		super();
-		this.name = "Stephen";
+		this.state = {
+			title: "Welcome"
+		};
+	}
+
+	changeTitle(title) {
+		this.setState({ title });
 	}
 
 	render() {
-		const name = "Stephen";
 		return (
 			<div>
-				<Header />
-				<h3>It's working!</h3>
-				<h3>Wow, 3 + 3 = {3 + 3}!</h3>
-				<h3>This person is {this.name}!</h3>
+				<Header
+					changeTitle={this.changeTitle.bind(this)}
+					title={this.state.title}
+				/>
 				<Footer />
 			</div>
 		);
